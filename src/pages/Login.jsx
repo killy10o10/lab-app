@@ -45,8 +45,7 @@ function Login() {
              <Link to="patients">
                 <Button>Log In</Button>
              </Link>
-         </div>
-            
+         </div>  
         </form>
       </div>
     </section>
