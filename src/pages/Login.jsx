@@ -17,12 +17,11 @@ function Login() {
   const imageArray = [lab1, lab2, lab3, lab4, lab5, lab6, lab7, lab8, lab9, lab10];
 
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
-    const [isImageLoaded, setIsImageLoaded] = useState(false);
+
 
     useEffect(() => {
       const interval = setInterval(() => {
         setCurrentImageIndex((prevIndex) => (prevIndex + 1) % imageArray.length);
-        setIsImageLoaded(false)
       }, 10000);
       return () => clearInterval(interval);
     }, [])
@@ -33,14 +32,8 @@ function Login() {
   return(
     <section style={{
       backgroundImage: `url(${currentImageUrl})`,
-      opacity: isImageLoaded ? 1 : 0,
+
       }} className="h-screen  bg-cover bg-center transition-opacity duration-500">
-      <img
-        src={currentImageUrl}
-        alt="Background"
-        className="hidden"
-        onLoad={() => setIsImageLoaded(true)}
-      />
       <div className="h-screen  bg-trans-orange flex items-center flex-col gap-5 justify-center p-5">
         <Typography variant="h1" className="font-poppins text-blue-600">Log In</Typography>
         <form className="bg-trans-white rounded-xl shadow-md p-5 h-[40vh] w-[100%] lg:w-[30vw] flex flex-col gap-10 items-center justify-center">
