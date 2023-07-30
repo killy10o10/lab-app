@@ -1,6 +1,8 @@
-import { Card, CardBody, CardHeader, Typography } from "@material-tailwind/react"
+import { Card, CardBody, CardHeader,Typography } from "@material-tailwind/react"
 
-function PatientInfo() {
+function PatientInfo(props) {
+  const {patientDetails} = props
+
   return (
     <section >
       <Card  className="shadow-xl shadow-blue-gray-900/5 mt-10">
@@ -8,21 +10,21 @@ function PatientInfo() {
         <CardBody>
           <div className="grid lg:flex items-baseline justify-between gap-10">
             <div>
-              <span className="flex items-baseline gap-1"><Typography variant="h6">PATIENT NAME:</Typography> Ampadu Yaw</span>
-              <span className="flex items-baseline gap-1"><Typography variant="h6">PATIENT ID:</Typography> Afrancho</span>
-              <span className="flex items-baseline gap-1"><Typography variant="h6">BRANCH:</Typography> Afrancho</span>
-              <span className="flex items-baseline gap-1"><Typography variant="h6">ADDRESS:</Typography> Afrancho</span>
+              <span className="flex items-baseline gap-1"><Typography variant="h6">PATIENT NAME:</Typography>{patientDetails ? patientDetails.name : ""} </span>
+              <span className="flex items-baseline gap-1"><Typography variant="h6">PATIENT ID:</Typography>{patientDetails ? patientDetails.patient_id : ""}</span>
+              <span className="flex items-baseline gap-1"><Typography variant="h6">BRANCH:</Typography>{patientDetails ? patientDetails.branch : ""}</span>
+              <span className="flex items-baseline gap-1"><Typography variant="h6">ADDRESS:</Typography>{patientDetails ? patientDetails.address : ""}</span>
             </div>
             <div>
-              <span className="flex items-baseline gap-1"><Typography variant="h6">GENDER:</Typography> Afrancho</span>
-              <span className="flex items-baseline gap-1"><Typography variant="h6">HOSPITAL:</Typography> Afrancho</span>
-              <span className="flex items-baseline gap-1"><Typography variant="h6">AGE:</Typography> Afrancho</span>
-              <span className="flex items-baseline gap-1"><Typography variant="h6">TEL NO:</Typography> Afrancho</span>
+              <span className="flex items-baseline gap-1"><Typography variant="h6">GENDER:</Typography>{patientDetails ? patientDetails.gender : ""}</span>
+              <span className="flex items-baseline gap-1"><Typography variant="h6">HOSPITAL:</Typography>{patientDetails ? patientDetails.hospital : ""}</span>
+              <span className="flex items-baseline gap-1"><Typography variant="h6">AGE:</Typography>{patientDetails ? patientDetails.age : ""}</span>
+              <span className="flex items-baseline gap-1"><Typography variant="h6">TEL NO:</Typography>{patientDetails ? patientDetails.tel_no : ""}</span>
             </div>
             <div>
-              <span className="flex items-baseline gap-1"><Typography variant="h6">DOCTOR:</Typography> Afrancho</span>
-              <span className="flex items-baseline gap-1"><Typography variant="h6">DATE:</Typography> Afrancho</span>
-              <span className="flex items-baseline gap-1"><Typography variant="h6">RESIDENCE ADDRESS:</Typography> Afrancho</span>
+              <span className="flex items-baseline gap-1"><Typography variant="h6">DOCTOR:</Typography>{patientDetails ? patientDetails.doctor : ""}</span>
+              <span className="flex items-baseline gap-1"><Typography variant="h6">DATE:</Typography>{patientDetails ? patientDetails.date : ""}</span>
+              <span className="flex items-baseline gap-1"><Typography variant="h6">RESIDENCE ADDRESS:</Typography>Ghana</span>
             </div>
           </div>
         </CardBody>

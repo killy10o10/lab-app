@@ -7,6 +7,7 @@ import PatientInfo from "../components/PatientInfo";
 
 function PatientReg() {
   const [query, setQuery] = useState('');
+  const [patientDetails, setPatientDetails] = useState(null)
 
   const onQuerySearch = (e) => {
     setQuery(e.target.value);
@@ -20,19 +21,22 @@ function PatientReg() {
     <section className="min-h-screen gap-5 flex font-poppins bg-gray-200">
       <div className="h-screen overflow-hidden flex flex-col">
         <Typography variant="h5" className="font-poppins bg-orange-500 p-2 shadow rounded-sm text-gray-100 text-center">Waiting Patients</Typography>
-        <Card className="overflow-y-auto shadow-xl shadow-blue-gray-900/5">
+        <Card className="overflow-y-auto rounded-t-none shadow-xl shadow-blue-gray-900/5">
           <Search query={query} onQuerySearch={onQuerySearch} />
           <List>
             {
               filterPatients.map((patient, index) => (
-                <ListItem key={index}>{patient.name}</ListItem>
-              )).sort()
+                <ListItem 
+                key={index}
+                onClick={() => setPatientDetails(patient)}
+                >{patient.name}</ListItem>
+              ))
             }
           </List>
         </Card>
       </div>
       <div className="flex w-[80%] justify-center">
-        <PatientInfo />
+        <PatientInfo patientDetails={patientDetails} />
       </div>
     </section>
   )
