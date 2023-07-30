@@ -1,5 +1,6 @@
 {
   "name": "lab-app",
+  "homepage": "https://killydev.me/lab-app/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
