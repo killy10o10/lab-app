@@ -4,8 +4,8 @@ function PatientInfo(props) {
   const {patientDetails} = props
 
   return (
-    <section >
-      <Card  className="shadow-xl shadow-blue-gray-900/5 mt-10">
+    <section className="w-[100%]">
+      <Card  className="shadow-xl shadow-blue-gray-900/5 mt-10 mb-10">
         <CardHeader color="orange" className="m-0 grid place-items-center rounded-b-none py-8 px-4 text-center font-bold text-2xl">Patient Information</CardHeader>
         <CardBody>
           <div className="grid lg:flex items-baseline justify-between gap-10">
