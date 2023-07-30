@@ -16,8 +16,7 @@ const router = createBrowserRouter(
       <Route index element={<Login />} />
       <Route path="patients"  element={<PatientReg />}  />
     </Route>
-  ),
-  { basename: import.meta.env.DEV ? '/' : '/lab-app/'}
+  )
 );
 
 export default function App() {
