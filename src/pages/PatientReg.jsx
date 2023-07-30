@@ -1,7 +1,7 @@
 import { Card,  List, ListItem, Typography } from "@material-tailwind/react"
 import Search from "../components/Search"
 import { useState } from "react"
-import { patientArray } from "../../api";
+import {newPatientArr } from "../../api";
 
 
 function PatientReg() {
@@ -11,8 +11,8 @@ function PatientReg() {
     setQuery(e.target.value);
   }
 
-  const filterPatients = patientArray.filter((patient) =>(
-    patient.toLowerCase().includes(query.toLowerCase())
+  const filterPatients = newPatientArr.filter((patient) =>(
+    patient.name.toLowerCase().includes(query.toLowerCase())
   ))
 
   return (
@@ -24,8 +24,8 @@ function PatientReg() {
           <List>
             {
               filterPatients.map((patient, index) => (
-                <ListItem key={index}>{patient}</ListItem>
-              ))
+                <ListItem key={index}>{patient.name}</ListItem>
+              )).sort()
             }
           </List>
         </Card>
