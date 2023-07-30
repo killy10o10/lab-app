@@ -19,7 +19,7 @@ function PatientReg() {
   return (
     <section className="min-h-screen gap-5 flex font-poppins bg-gray-200">
       <div className="h-screen overflow-hidden flex flex-col">
-        <Typography variant="h5" className="font-poppins bg-blue-gray-300 p-2 shadow rounded-sm text-blue-gray-900 text-center">Waiting Patients</Typography>
+        <Typography variant="h5" className="font-poppins bg-orange-500 p-2 shadow rounded-sm text-gray-100 text-center">Waiting Patients</Typography>
         <Card className="overflow-y-auto shadow-xl shadow-blue-gray-900/5">
           <Search query={query} onQuerySearch={onQuerySearch} />
           <List>
@@ -31,7 +31,7 @@ function PatientReg() {
           </List>
         </Card>
       </div>
-      <div>
+      <div className="flex w-[80%] justify-center">
         <PatientInfo />
       </div>
     </section>

@@ -1,17 +1,33 @@
-import { Card, CardBody, CardHeader } from "@material-tailwind/react"
+import { Card, CardBody, CardHeader, Typography } from "@material-tailwind/react"
 
 function PatientInfo() {
   return (
-    <>
-      <Card  className="shadow-xl shadow-blue-gray-900/5">
-        <CardHeader>Patient Information</CardHeader>
+    <section >
+      <Card  className="shadow-xl shadow-blue-gray-900/5 mt-10">
+        <CardHeader color="orange" className="m-0 grid place-items-center rounded-b-none py-8 px-4 text-center font-bold text-2xl">Patient Information</CardHeader>
         <CardBody>
-          <table>
-            <tr>Branch</tr>
-          </table>
+          <div className="grid lg:flex items-baseline justify-between gap-10">
+            <div>
+              <span className="flex items-baseline gap-1"><Typography variant="h6">PATIENT NAME:</Typography> Ampadu Yaw</span>
+              <span className="flex items-baseline gap-1"><Typography variant="h6">PATIENT ID:</Typography> Afrancho</span>
+              <span className="flex items-baseline gap-1"><Typography variant="h6">BRANCH:</Typography> Afrancho</span>
+              <span className="flex items-baseline gap-1"><Typography variant="h6">ADDRESS:</Typography> Afrancho</span>
+            </div>
+            <div>
+              <span className="flex items-baseline gap-1"><Typography variant="h6">GENDER:</Typography> Afrancho</span>
+              <span className="flex items-baseline gap-1"><Typography variant="h6">HOSPITAL:</Typography> Afrancho</span>
+              <span className="flex items-baseline gap-1"><Typography variant="h6">AGE:</Typography> Afrancho</span>
+              <span className="flex items-baseline gap-1"><Typography variant="h6">TEL NO:</Typography> Afrancho</span>
+            </div>
+            <div>
+              <span className="flex items-baseline gap-1"><Typography variant="h6">DOCTOR:</Typography> Afrancho</span>
+              <span className="flex items-baseline gap-1"><Typography variant="h6">DATE:</Typography> Afrancho</span>
+              <span className="flex items-baseline gap-1"><Typography variant="h6">RESIDENCE ADDRESS:</Typography> Afrancho</span>
+            </div>
+          </div>
         </CardBody>
       </Card>
-    </>
+    </section>
   )
 }
 
