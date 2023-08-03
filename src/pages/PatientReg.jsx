@@ -1,8 +1,9 @@
-import { Button, Card,  CardBody,  CardFooter,  Input,  List, ListItem, Option, Select, Typography } from "@material-tailwind/react"
+import { Button, Card, Input,  List, ListItem, Option, Select, Typography } from "@material-tailwind/react"
 import Search from "../components/Search"
 import { useState } from "react"
 import {newPatientArr } from "../../api";
 import PatientInfo from "../components/PatientInfo";
+import TestFeild from "../components/TestFeild";
 
 
 function PatientReg() {
@@ -40,7 +41,7 @@ function PatientReg() {
         <div className="w-[100%]">
             <Typography variant="h4" className="text-center font-poppins mb-10">Results</Typography>
             <div className="lg:flex gap-10 grid justify-center lg:justify-start">
-            <div>
+            <div className="flex flex-col items-center">
                 <div className="w-72">
                   <Select color="orange" label="Select Test Here" className="capitalize">
                     <Option className="capitalize">Urinalysis</Option>
@@ -51,18 +52,7 @@ function PatientReg() {
                     <Option className="capitalize">Liver function test</Option>
                   </Select>
                 </div>
-                <Card className="my-10">
-                  <CardBody>
-                    <table>
-                      <thead>Parameters</thead>
-                      <thead>Results Found</thead>
-                      <thead>Reference</thead>
-                    </table>
-                  </CardBody>
-                  <CardFooter>
-                    <Button color="orange" className="capitalize font-poppins text-lg py-1">Save</Button>
-                  </CardFooter>
-                </Card>
+                <TestFeild />
               </div>
               <div className="flex flex-col items-center justify-center w-full mb-10">
                 <p  className="font-bold mb-10">Input your findings below:</p>
