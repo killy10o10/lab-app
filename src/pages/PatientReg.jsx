@@ -1,4 +1,4 @@
-import { Card,  List, ListItem, Typography } from "@material-tailwind/react"
+import { Card,  List, ListItem, Option, Select, Typography } from "@material-tailwind/react"
 import Search from "../components/Search"
 import { useState } from "react"
 import {newPatientArr } from "../../api";
@@ -35,8 +35,24 @@ function PatientReg() {
           </List>
         </Card>
       </div>
-      <div className="flex lg:w-[80%] w-[100%] lg:justify-center">
+      <div className="flex flex-col lg:w-[80%] w-[100%]">
         <PatientInfo patientDetails={patientDetails} />
+        <div className="w-[100%]">
+            <Typography variant="h4" className="text-center font-poppins mb-10">Results</Typography>
+            <div className="lg:flex gap-10 grid justify-center lg:justify-start">
+              <div className="w-72">
+                <Select color="orange" label="Select Test Here" className="capitalize">
+                  <Option className="capitalize">Urinalysis</Option>
+                  <Option className="capitalize">Hematology</Option>
+                  <Option className="capitalize">Complete Blood count</Option>
+                  <Option className="capitalize">Activated partial thromboplastin time</Option>
+                  <Option className="capitalize">Blood Test</Option>
+                  <Option className="capitalize">Liver function test</Option>
+                </Select>
+              </div>
+              <Typography variant="h4">Other Table info</Typography>
+            </div>
+        </div>
       </div>
     </section>
   )
