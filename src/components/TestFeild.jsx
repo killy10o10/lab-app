@@ -13,7 +13,7 @@ function TestFeild() {
 
   return (
     <>
-      <Card className="w-full overflow-scroll my-10">
+      <Card className="w-full my-10">
         <table className="w-full lg:min-w-max table-auto ">
           <thead>
             <tr>
