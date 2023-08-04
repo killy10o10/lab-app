@@ -39,13 +39,13 @@ function TestFeild() {
               return (
                 <tr key={nanoid()}>
                   <td className={classes}>
-                    <small className="text-blue-gray-900">{parameters}</small>
+                    <span className="text-blue-gray-900">{parameters}</span>
                   </td>
                   <td className={classes}>
-                    <small className="text-blue-gray-900">{results}</small>
+                    <span className="text-blue-gray-900">{results}</span>
                   </td>
                   <td className={classes}>
-                    <small className="text-blue-gray-900">{reference}</small>
+                    <span className="text-blue-gray-900">{reference}</span>
                   </td>
                 </tr>
               );
